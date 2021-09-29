@@ -23,9 +23,12 @@ function hideMessage() {
 }
 checkButton.addEventListener("click", function validateBillAndCashAmount() {
   hideMessage();
-  
-    if (billAmount.value > 0) {
-        if (cashGiven.value >= billAmount.value) {
+  if(billAmount.value===""||cashGiven.value===""){
+    showMessage("Both the fields are mandatory");
+  }
+  else{
+     if(Number(billAmount.value) > 0) {
+        if (Number(cashGiven.value) >= Number(billAmount.value)) {
           const amountToBeReturned = cashGiven.value - billAmount.value;
           calculateChange(amountToBeReturned);
         } else {
@@ -33,7 +36,8 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
             "The cash provided should atleast be equal to the bill amount"
           );
         }
-      } else {
+      }
+       else {
         showMessage("The bill amount should be greater than 0");
       }
- });
+ }});
