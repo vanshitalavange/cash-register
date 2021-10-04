@@ -2,6 +2,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
     
+    
 }
 :root{
     --primary-color:#10B981;
@@ -99,4 +100,14 @@ th, td {
     padding: 0.3rem;
     background-color: #D1FAE5;
     ;
+}
+.social-links
+{
+  margin-top:2.5rem;
+  text-align: center;
+  font-size: 2.8rem; 
+  
+}
+.social-links i{
+    color:var(--darkgreen-color);
 }
